@@ -25,21 +25,32 @@ class CategoryController extends Controller
         $where = [];
         $category = new ProductCategory();
 
+
         if(!empty($filter)){
-            if(!empty($filter['parent_id'])){
-                $where[] = ['parent_id',$filter['parent_id']];
-                $filter['parent_id'] = $filter['parent_id'];
+            if(isset($filter['name']) && strlen($filter['name']) >= 2) {
+                $category = $category->where('name','LIKE',$filter['name'].'%');
+            }
+
+            if(isset($filter['code']) && !empty($filter['code'])) {
+                $category = $category->where('code',$filter['code']);
+            }
+
+            if(isset($filter['status']) && $filter['status'] != 0) {
+                $category = $category->where('status',$filter['status']);
             }
 
         }else{
             $where[] = ['status','Active'];
-            $where[] = ['parent_id',0];
+            // $where[] = ['parent_id',0];
             $filter['status'] = "Active";
             $filter['parent_id'] = 0;
         }
 
-        $rows = ProductCategory::where($where)->paginate(10);
-        return view('product.category.index',compact('filter','where','rows'));
+        $filter_page = "product.category.filter";
+
+        $rows = $category->sortable()->paginate(10);
+
+        return view('product.category.index',compact('filter_page','filter','where','rows'));
     }
 
     /**
@@ -76,7 +87,8 @@ class CategoryController extends Controller
      */
     public function edit(ProductCategory $productCategory)
     {
-        //
+        $category_list = ProductCategory::all();
+        return view('product.category.edit', compact('category_list','productCategory'));
     }
 
     /**
@@ -84,7 +96,11 @@ class CategoryController extends Controller
      */
     public function update(UpdateProductCategoryRequest $request, ProductCategory $productCategory)
     {
-        //
+        $input = $request->validated();
+        $input['status'] = 'Active';
+        $productCategory->update($input);
+
+        return redirect(route('product-category.index'))->with('alert',['type'=>'alert-success','message'=>'Categoria a fost modificat cu succes!']);
     }
 
     /**
@@ -92,6 +108,7 @@ class CategoryController extends Controller
      */
     public function destroy(ProductCategory $productCategory)
     {
-        //
+        $productCategory->update(['status' => 'Inactive']);
+        return redirect(route('product-category.index'))->with('alert',['type'=>'alert-success','message'=>'Categoria a fost dezactivata cu succes!']);
     }
 }

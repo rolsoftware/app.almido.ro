@@ -19,31 +19,36 @@
         </div>
     @endif
 
-    <form action="{{ route('user.update',$user) }}" method="POST">
+    <form action="{{ route('product-category.update',$productCategory) }}" method="POST">
         @csrf
         @method('PUT')
 
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
-                    <h5 class="card-header bg-transparent border-bottom text-uppercase">Editeaza</h5>
+                    <h5 class="card-header bg-transparent border-bottom text-uppercase">Date</h5>
                     <div class="card-body">
 
                         <div class="row mb-4">
-                            <label for="username" class="col-form-label col-lg-2">Utilizator</label>
+                            <label for="parent_id" class="col-form-label col-lg-2">Parinte</label>
                             <div class="col-lg-10">
-                                <input id="username" name="username" type="text" value="{{ old('username',$user['username']) }}" class="form-control @error('username') is-invalid @enderror" placeholder="">
-                                @error('username')
+                                <select class="form-control select2 @error('parent_id') is-invalid @enderror" name="parent_id" >
+                                    <option value="0">/</option>
+                                    @foreach($category_list AS $key => $category)
+                                            <option value="{{ $category->id }}" {{ old('parent_id') == $category->id ? 'selected':'' }}>{{ $category->name }} ({{ $category->code }})</option>
+                                    @endforeach
+                                </select>
+                                @error('parent_id')
                                     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="row mb-4">
-                            <label for="name" class="col-form-label col-lg-2">Email</label>
+                            <label for="code" class="col-form-label col-lg-2">Cod</label>
                             <div class="col-lg-10">
-                                <input id="email" name="email" type="text" value="{{ old('email',$user['email']) }}" class="form-control @error('email') is-invalid @enderror" placeholder="">
-                                @error('email')
+                                <input id="code" name="code" type="text" value="{{ old('code',$productCategory->code) }}" class="form-control @error('code') is-invalid @enderror">
+                                @error('code')
                                     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                 @enderror
                             </div>
@@ -52,23 +57,23 @@
                         <div class="row mb-4">
                             <label for="name" class="col-form-label col-lg-2">Nume</label>
                             <div class="col-lg-10">
-                                <input id="name" name="name" type="text" value="{{ old('name',$user['name']) }}" class="form-control @error('name') is-invalid @enderror" placeholder="">
+                                <input id="name" name="name" type="text" value="{{ old('name',$productCategory->name) }}" class="form-control @error('name') is-invalid @enderror">
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="row mb-4">
-                            <label for="parent_id" class="col-form-label col-lg-2">Rol</label>
+                            <label for="description" class="col-form-label col-lg-2">Descriere</label>
                             <div class="col-lg-10">
-                                <select class="form-control select2" name="roles[]" multiple>
-                                    @foreach ($roles AS $key => $role)
-                                        <option value="{{ $key }}" {{ (collect(old('roles',$userRole))->contains($key)) ? 'selected':'' }}>{{ $role }}</option>
-                                    @endforeach
-                                </select>
+                                <textarea id="description" name="description" class="form-control @error('description') is-invalid @enderror">{{ old('description',$productCategory->description) }}</textarea>
+                                @error('description')
+                                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                @enderror
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -80,7 +85,7 @@
             </div>
             <div class="col-sm-9">
                 <div class="text-sm-end">
-                    <a href="{{ route('user.index') }}" class="btn btn-secondary waves-effect waves-light"><i class="mdi mdi-close-circle-outline font-size-16 align-middle me-2"></i> Renunta</a>
+                    <a href="{{ route('product-category.index') }}" class="btn btn-secondary waves-effect waves-light"><i class="mdi mdi-close-circle-outline font-size-16 align-middle me-2"></i> Renunta</a>
                 </div>
             </div>
         </div>

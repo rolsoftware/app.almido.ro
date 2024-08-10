@@ -17,8 +17,8 @@
             <form action="#" method="GET" id="form">
 
                 <div class="mb-3">
-                    <label for="filter-username" class="form-label">Utilizator</label>
-                    <input id="filter-username" name="filter[username]" type="text" value="{{ old('filter.username',@$filter['username']) }}" class="form-control">
+                    <label for="filter-code" class="form-label">Cod</label>
+                    <input id="filter-code" name="filter[code]" type="text" value="{{ old('filter.code',@$filter['code']) }}" class="form-control">
                 </div>
 
                 <div class="mb-3">
@@ -27,33 +27,18 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="filter-email" class="form-label">Email</label>
-                    <input id="filter-email" name="filter[email]" type="text" value="{{ old('filter.email',@$filter['email']) }}" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <label for="filter-role" class="form-label">Rol</label>
-                    <select id="filter-role" name="filter[role]" class="form-control">
-                        <option value="0" {{ old('filter.role',@$filter['role']) == '0' ? 'selected' : ''}}>All</option>
-                        @foreach ($roles as $key => $role)
-                            <option value="{{ $role }}" {{ old('filter.role',@$filter['role']) == $role ? 'selected' : ''}}>{{ $role }}</option>
-                        @endforeach
-                    </select>
-                </div>
-
-                <div class="mb-3">
-                    <label for="filter-active" class="form-label">Activ</label>
-                    <select id="filter-active" name="filter[active]" class="form-control">
-                        <option value="0" {{ old('filter.active',@$filter['active']) == '0' ? 'selected' : ''}}>All</option>
-                        <option value="Yes" {{ old('filter.active',@$filter['active']) == 'Yes' ? 'selected' : ''}}>Da</option>
-                        <option value="No" {{ old('filter.active',@$filter['active']) == 'No' ? 'selected' : ''}}>Nu</option>
+                    <label for="filter-status" class="form-label">Activ</label>
+                    <select id="filter-status" name="filter[status]" class="form-control">
+                        <option value="0" {{ old('filter.status',@$filter['status']) == '0' ? 'selected' : ''}}>All</option>
+                        <option value="Active" {{ old('filter.status',@$filter['status']) == 'Active' ? 'selected' : ''}}>Active</option>
+                        <option value="Inactive" {{ old('filter.status',@$filter['status']) == 'Inactive' ? 'selected' : ''}}>Inactive</option>
                     </select>
                 </div>
 
                 <div class="row text-center mb-4">
                     <div class="col-sm-12">
                         <button type="submit" class="btn btn-success waves-effect"><i class="mdi mdi-filter"></i> Aplica</button>
-                        <a class="btn btn-danger waves-effect" href="{{ route('user.index') }}" title="Reset"><i class="mdi mdi-filter-off"></i> Reset</a>
+                        <a class="btn btn-danger waves-effect" href="{{ route('product-category.index') }}" title="Reset"><i class="mdi mdi-filter-off"></i> Reset</a>
                     </div>
                 </div>
             </form>
@@ -66,15 +51,7 @@
 @section('script')
     <script>
         $(document).ready(function () {
-            $('#type_id').select2({
-                dropdownParent: $('#form')
-            });
-
-            $('#filter-role').select2({
-                dropdownParent: $('#form')
-            });
-
-            $('#filter-active').select2({
+            $('#filter-status').select2({
                 dropdownParent: $('#form')
             });
         });

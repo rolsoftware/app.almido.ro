@@ -4,9 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Kyslik\ColumnSortable\Sortable;
 
 class ProductCategory extends Model
 {
-    use HasFactory;
+    use HasFactory, Sortable;
     protected $fillable = ['parent_id', 'code', 'name', 'description', 'status'];
 }

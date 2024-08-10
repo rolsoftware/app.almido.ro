@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateProductCategoryRequest extends FormRequest
 {
@@ -11,7 +12,7 @@ class UpdateProductCategoryRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +23,10 @@ class UpdateProductCategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'parent_id'     => ['required', 'numeric', 'gt:-1'],
+            'code'          => ['required', 'numeric', 'gt:0', Rule::unique('product_categories')->ignore($this->product_category)],
+            'name'          => ['required', 'string', 'max:250'],
+            'description'   => ['nullable', 'string', ],
         ];
     }
 }

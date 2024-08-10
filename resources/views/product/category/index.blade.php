@@ -62,17 +62,16 @@
                                                     <li class="list-inline-item"><a href="{{ route('product-category.edit',$row->id) }}" title="Editeaza"><i class="text-success bx bx-edit-alt"></i></a></li>
                                                 @endcan
 
-                                                @if($row->active == 'Yes')
-                                                    @can('product:category-delete')
-                                                        <li class="list-inline-item">
-                                                            <a href="" title="Sterge"><i class="delete-confirm text-danger bx bx-trash" data-id="{{ $row->id }}"></i></a>
-                                                            <form id="delete-form-{{ $row->id }}" action="{{ route('product-category.destroy',$row->id) }}" method="POST" class="d-none">
-                                                                @csrf
-                                                                @method('delete')
-                                                            </form>
-                                                        </li>
-                                                    @endcan
-                                                @endif
+                                                @can('product:category-delete')
+                                                    <li class="list-inline-item">
+                                                        <a href="" title="Sterge"><i class="delete-confirm text-danger bx bx-trash" data-id="{{ $row->id }}"></i></a>
+                                                        <form id="delete-form-{{ $row->id }}" action="{{ route('product-category.destroy',$row->id) }}" method="POST" class="d-none">
+                                                            @csrf
+                                                            @method('delete')
+                                                        </form>
+                                                    </li>
+                                                @endcan
+
                                             </ul>
                                         </td>
                                     </tr>
