@@ -1,0 +1,80 @@
+{
+    "menu": [
+      {
+        "name": "Dashboard",
+        "url": "/",
+        "icon": "bx bxs-dashboard",
+        "permissions": "dashboard-list",
+        "slug": "pages-home"
+      }
+    ],
+    "app":[
+      {
+        "name": "App",
+        "url": "/app",
+        "icon": "bx bx-cog",
+        "permissions": "app-list",
+        "slug": "app",
+        "subitems": [
+          {
+            "name": "Utilizatori",
+            "url": "/app/user",
+            "permissions": "app:user-list",
+            "icon": "mdi mdi-account-cog-outline",
+            "slug": "app:user"
+          },
+          {
+            "name": "Roluri",
+            "url": "/app/role",
+            "permissions": "app:role-list",
+            "icon": "bx bxs-user-detail",
+            "slug": "app:role"
+          },
+          {
+            "name": "Permisiuni",
+            "url": "/app/permission",
+            "permissions": "app:permission-list",
+            "icon": "bx bx-shield",
+            "slug": "product-type"
+          },
+          {
+            "name": "Nomenclatoare",
+            "url": "/app/nomenclature",
+            "permissions": "app:nomenclature-list",
+            "icon": "mdi mdi-format-list-numbered",
+            "slug": "nomenclature"
+          },
+          {
+            "name": "Variabile",
+            "url": "/app/var",
+            "permissions": "app:var-list",
+            "icon": "mdi mdi-variable",
+            "slug": "app:var"
+          },
+          {
+            "name": "Loguri",
+            "url": "/log-viewer",
+            "permissions": "app:log-list",
+            "icon": "mdi mdi-math-log",
+            "target": "_blank",
+            "slug": "app:log"
+          },
+          {
+            "name": "Horizon",
+            "url": "/horizon",
+            "permissions": "app:horizon-list",
+            "icon": "mdi mdi-cog-sync-outline",
+            "target": "_blank",
+            "slug": "app:horizon"
+          },
+          {
+            "name": "About",
+            "url": "/about",
+            "permissions": "app:about-list",
+            "icon": "mdi mdi-information-variant",
+            "slug": "app:about"
+          }
+        ]
+      }
+    ]
+}
