@@ -6,6 +6,59 @@
         "icon": "bx bxs-dashboard",
         "permissions": "dashboard-list",
         "slug": "pages-home"
+      },
+      {
+        "name": "Comenzi",
+        "url": "/order",
+        "icon": "mdi mdi-order-bool-descending-variant",
+        "permissions": "order-list",
+        "slug": "order"
+      },
+      {
+        "name": "Produse",
+        "url": "#",
+        "icon": "bx bx-box",
+        "permissions": "product-list",
+        "slug": "product",
+        "subitems": [
+          {
+            "name": "Produse",
+            "url": "/product",
+            "permissions": "product:product-list",
+            "icon": "bx bx-box",
+            "slug": "product:product-invoice"
+          },
+          {
+            "name": "Categorii",
+            "url": "product-category",
+            "permissions": "product:category-list",
+            "icon": "mdi mdi-group",
+            "slug": "product:category"
+          }
+        ]
+      },
+      {
+        "name": "Cumparaturi",
+        "url": "#",
+        "icon": "bx bx-basket",
+        "permissions": "shopping-list",
+        "slug": "shopping",
+        "subitems": [
+          {
+            "name": "Facturi furnizori",
+            "url": "/supplier-invoice",
+            "permissions": "shopping:supplier-invoice-list",
+            "icon": "bx bxs-circle",
+            "slug": "shopping:supplier-invoice"
+          },
+          {
+            "name": "Funizori",
+            "url": "supplier",
+            "permissions": "shopping:supplier-invoice-list",
+            "icon": "bx bxs-circle",
+            "slug": "shopping:supplier-invoice"
+          }
+        ]
       }
     ],
     "app":[

@@ -18,7 +18,18 @@ class PermissionSeeder extends Seeder
     {
 
         $permissions_list = [
-            'dashboard'         => ['list'],
+            'dashboard'                 => ['list'],
+
+            'order'                     => ['list','create','edit','delete','export'],
+
+            'product'                   => ['list'],
+            'product:product'           => ['list','create','edit','delete','export'],
+            'product:category'          => ['list','create','edit','delete','export'],
+
+            'shopping'                  => ['list'],
+            'shopping:supplier-invoice' => ['list','create','edit','delete','export'],
+            'shopping:supplier'         => ['list','create','edit','delete','export'],
+
             'app'               => ['list'],
             'app:nomenclature'  => ['list','create','edit','delete','export'],
             'app:user'          => ['list','create','edit','delete','export'],
