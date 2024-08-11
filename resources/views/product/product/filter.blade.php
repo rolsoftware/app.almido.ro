@@ -37,6 +37,11 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="filter-stock" class="form-label">Stoc</label>
+                    <input id="filter-stock" name="filter[stock]" type="text" value="{{ old('filter.stock',@$filter['stock']) }}" class="form-control">
+                </div>
+
+                <div class="mb-3">
                     <label for="filter-category_id" class="form-label">Status</label>
                     <select id="filter-category_id" name="filter[category_id]" class="form-control">
                         <option value="0" {{ old('filter.category_id',@$filter['category_id']) == '0' ? 'selected' : ''}}>All</option>
@@ -58,7 +63,7 @@
                 <div class="row text-center mb-4">
                     <div class="col-sm-12">
                         <button type="submit" class="btn btn-success waves-effect"><i class="mdi mdi-filter"></i> Aplica</button>
-                        <a class="btn btn-danger waves-effect" href="{{ route('product-category.index') }}" title="Reset"><i class="mdi mdi-filter-off"></i> Reset</a>
+                        <a class="btn btn-danger waves-effect" href="{{ route('product.index') }}" title="Reset"><i class="mdi mdi-filter-off"></i> Reset</a>
                     </div>
                 </div>
             </form>

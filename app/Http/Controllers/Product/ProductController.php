@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Http\Controllers\Controller;
 use App\Models\ProductCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
 {
@@ -56,6 +57,10 @@ class ProductController extends Controller
                 $product = $product->where('category_id',$filter['category_id']);
             }
 
+            if(isset($filter['stock'])) {
+                $product = $product->where('stock',$filter['stock']);
+            }
+
         }else{
             $where[]            = ['status','Active'];
             $filter['status']   = "Active";
@@ -63,6 +68,7 @@ class ProductController extends Controller
 
         $rows = $product->sortable()->paginate(10);
 
+        Session::put('product.index_url', request()->fullUrl());
         return view('product.product.index',compact('filter_page','filter','category_list','where','rows'));
     }
 
@@ -71,8 +77,9 @@ class ProductController extends Controller
      */
     public function create()
     {
+        $url_back = Session::get('product.index_url');
         $category_list = ProductCategory::all();
-        return view('product.product.create', compact('category_list'));
+        return view('product.product.create', compact('category_list','url_back'));
     }
 
     /**
@@ -85,6 +92,10 @@ class ProductController extends Controller
         $input['value'] = $input['price'] + ($input['price'] * $input['vat'] / 100);
         Product::create($input);
 
+        $url_back = Session::get('product.index_url');
+        if($url_back){
+            return redirect($url_back)->with('alert',['type'=>'alert-success','message'=>'Produsul a fost actualizat cu succes!']);
+        }
         return redirect(route('product.index'))->with('alert',['type'=>'alert-success','message'=>'Produsul a fost adaugat cu succes!']);
     }
 
@@ -101,8 +112,9 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        $url_back = Session::get('product.index_url');
         $category_list = ProductCategory::all();
-        return view('product.product.edit',compact('product','category_list'));
+        return view('product.product.edit',compact('product','category_list','url_back'));
     }
 
     /**
@@ -116,6 +128,10 @@ class ProductController extends Controller
         $input['status'] = 'Active';
         $product->update($input);
 
+        $url_back = Session::get('product.index_url');
+        if($url_back){
+            return redirect($url_back)->with('alert',['type'=>'alert-success','message'=>'Produsul a fost actualizat cu succes!']);
+        }
         return redirect(route('product.index'))->with('alert',['type'=>'alert-success','message'=>'Produsul a fost actualizat cu succes!']);
     }
 
@@ -125,10 +141,5 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
-    }
-
-    public function stock (Product $product)
-    {
-        return view('product.product.stock',compact('product'));
     }
 }

@@ -34,7 +34,6 @@ Route::resource('/app/user', App\Http\Controllers\Base\UserController::class);
 
 
 # Product
-Route::get('/product/stock', [App\Http\Controllers\Product\ProductController::class, 'stock'])->name('product.stock');
 Route::resource('/product', App\Http\Controllers\Product\ProductController::class);
 Route::resource('/product-category', App\Http\Controllers\Product\CategoryController::class);
 
