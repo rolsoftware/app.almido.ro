@@ -1,0 +1,621 @@
+{
+  "isError": false,
+  "messages": [],
+  "errors": [],
+  "results": [
+    {
+      "part_number_key": "DN8SRNYBM",
+      "brand_name": "OEM",
+      "buy_button_rank": 1,
+      "category_id": 2799,
+      "id": 346,
+      "brand": "OEM",
+      "vendor_category_id": null,
+      "name": "Difuzor Aromaterapie cu ultrasunet, uleiuri esentiale, cu telecomanda 300 ml, stejar",
+      "part_number": "SB-274",
+      "sale_price": "109.2400",
+      "currency": "RON",
+      "description": "",
+      "url": "",
+      "warranty": 0,
+      "general_stock": 4,
+      "weight": "0",
+      "status": 1,
+      "recommended_price": null,
+      "images": [
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/047/602/216/47602216.jpg",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/047/602/201/47602201.jpg",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/047/602/202/47602202.jpg",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/047/602/203/47602203.jpg",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/047/602/209/47602209.jpg",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/047/602/211/47602211.jpg",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/047/602/214/47602214.jpg",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/047/602/213/47602213.jpg",
+          "display_type": 0
+        }
+      ],
+      "characteristics": [
+        {
+          "id": 5401,
+          "tag": null,
+          "value": "Lemn"
+        },
+        {
+          "id": 5704,
+          "tag": null,
+          "value": "Difuzor de aroma"
+        },
+        {
+          "id": 6372,
+          "tag": null,
+          "value": "ABS"
+        },
+        {
+          "id": 6556,
+          "tag": null,
+          "value": "1 Pahar"
+        },
+        {
+          "id": 6556,
+          "tag": null,
+          "value": "1 alimentator"
+        },
+        {
+          "id": 6556,
+          "tag": null,
+          "value": "1 Difuzor de aroma"
+        },
+        {
+          "id": 6556,
+          "tag": null,
+          "value": "1 Telecomanda IR"
+        },
+        {
+          "id": 6779,
+          "tag": null,
+          "value": "13 centimetru"
+        },
+        {
+          "id": 6866,
+          "tag": null,
+          "value": "8 watt"
+        },
+        {
+          "id": 6877,
+          "tag": null,
+          "value": "130 centimetru"
+        },
+        {
+          "id": 6878,
+          "tag": null,
+          "value": "400 gram"
+        },
+        {
+          "id": 6936,
+          "tag": null,
+          "value": "Smart"
+        },
+        {
+          "id": 6952,
+          "tag": null,
+          "value": "300 Mililitru"
+        },
+        {
+          "id": 7115,
+          "tag": null,
+          "value": "17 centimetru"
+        },
+        {
+          "id": 8366,
+          "tag": null,
+          "value": "1"
+        },
+        {
+          "id": 9139,
+          "tag": null,
+          "value": "Temporizator"
+        },
+        {
+          "id": 9139,
+          "tag": null,
+          "value": "Lumina"
+        },
+        {
+          "id": 9139,
+          "tag": null,
+          "value": "Oprire automata"
+        },
+        {
+          "id": 9139,
+          "tag": null,
+          "value": "Intensitate reglabila"
+        },
+        {
+          "id": 9139,
+          "tag": null,
+          "value": "Telecomanda"
+        },
+        {
+          "id": 9139,
+          "tag": null,
+          "value": "Cromoterapie"
+        },
+        {
+          "id": 9615,
+          "tag": null,
+          "value": "Da"
+        },
+        {
+          "id": 9629,
+          "tag": null,
+          "value": "Relaxare"
+        },
+        {
+          "id": 9629,
+          "tag": null,
+          "value": "Purificarea aerului"
+        },
+        {
+          "id": 9629,
+          "tag": null,
+          "value": "Aromatizare aer inconjurator"
+        },
+        {
+          "id": 9629,
+          "tag": null,
+          "value": "Mentine umiditatea in camera"
+        },
+        {
+          "id": 9629,
+          "tag": null,
+          "value": "1H/3H/6H/ON"
+        },
+        {
+          "id": 9707,
+          "tag": null,
+          "value": "Cu ultrasunete"
+        }
+      ],
+      "attachments": [],
+      "vat_id": 1,
+      "family": null,
+      "start_date": [],
+      "estimated_stock": 4,
+      "reversible_vat_charging": false,
+      "min_sale_price": "84.0300",
+      "max_sale_price": "150.0000",
+      "offer_details": {
+        "id": 78653319,
+        "warranty_type": 1,
+        "supply_lead_time": 14,
+        "emag_club": 1
+      },
+      "content_details": {
+        "source_language": "ro_RO"
+      },
+      "offer_properties": [],
+      "availability": [
+        {
+          "value": 3
+        }
+      ],
+      "stock": [
+        {
+          "value": 4
+        }
+      ],
+      "handling_time": [
+        {
+          "value": 0
+        }
+      ],
+      "barcode": [],
+      "ean": [
+        "0749672946017"
+      ],
+      "commission": null,
+      "validation_status": [
+        {
+          "value": 9,
+          "description": "Approved documentation",
+          "errors": null
+        }
+      ],
+      "translation_validation_status": [
+        {
+          "value": 9,
+          "description": "Approved documentation",
+          "errors": null
+        }
+      ],
+      "offer_validation_status": {
+        "value": 1,
+        "description": "Saleable",
+        "errors": null
+      },
+      "auto_translated": 0,
+      "ownership": true,
+      "best_offer_sale_price": 109.24,
+      "best_offer_recommended_price": 109.24,
+      "number_of_offers": 1,
+      "genius_eligibility": 1,
+      "recycleWarranties": 0,
+      "rrp_guidelines": null
+    },
+    {
+      "part_number_key": "DRRK86MBM",
+      "brand_name": "Nova",
+      "buy_button_rank": 3,
+      "category_id": 60,
+      "id": 351,
+      "brand": "Nova",
+      "vendor_category_id": null,
+      "name": "Ondulator ceramic in spirala pentru par, temperatura putere 120-200°C, incalzire rapida, negru-visiniu",
+      "part_number": "MSD-38",
+      "sale_price": "50.4200",
+      "currency": "RON",
+      "description": "<p>Ondulator ceramic de par in spirala Specificatii tehnice: Se incalzeste rapid Material placa: ceramica, plastic Indicator de putere Temperatura: 120-200&deg;C Cordon rotativ Lungimea cablului de alimentare: 165cm Dimensiuni ondulator: 31cm x 4cm Alimentare: 240V Putere: 35W Culoare: negru - visiniu Produsul este certificat CE</p>",
+      "url": "",
+      "warranty": 0,
+      "general_stock": 9,
+      "weight": "0",
+      "status": 1,
+      "recommended_price": null,
+      "images": [
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/038/567/777/38567777.jpg",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/038/567/776/38567776.jpg",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/042/499/601/42499601.jpg",
+          "display_type": 0
+        }
+      ],
+      "characteristics": [
+        {
+          "id": 1008,
+          "tag": null,
+          "value": "Ceramica"
+        },
+        {
+          "id": 5401,
+          "tag": null,
+          "value": "Visiniu"
+        },
+        {
+          "id": 5401,
+          "tag": null,
+          "value": "Negru"
+        },
+        {
+          "id": 5704,
+          "tag": null,
+          "value": "Ondulator par"
+        },
+        {
+          "id": 6780,
+          "tag": null,
+          "value": "4 cm"
+        },
+        {
+          "id": 6862,
+          "tag": null,
+          "value": "31 cm"
+        },
+        {
+          "id": 6877,
+          "tag": null,
+          "value": "165 cm"
+        },
+        {
+          "id": 7179,
+          "tag": null,
+          "value": "240 V"
+        },
+        {
+          "id": 7222,
+          "tag": null,
+          "value": "200 C"
+        },
+        {
+          "id": 9623,
+          "tag": null,
+          "value": "Par"
+        },
+        {
+          "id": 9645,
+          "tag": null,
+          "value": "Ondulare"
+        },
+        {
+          "id": 9703,
+          "tag": null,
+          "value": "Profesional"
+        },
+        {
+          "id": 9751,
+          "tag": null,
+          "value": "Cilindric"
+        }
+      ],
+      "attachments": [],
+      "vat_id": 1,
+      "family": null,
+      "start_date": [],
+      "estimated_stock": 9,
+      "reversible_vat_charging": false,
+      "min_sale_price": "40.0000",
+      "max_sale_price": "80.0000",
+      "offer_details": {
+        "id": 78654107,
+        "warranty_type": 1,
+        "supply_lead_time": 14,
+        "emag_club": 1
+      },
+      "content_details": {
+        "source_language": "ro_RO"
+      },
+      "offer_properties": [],
+      "availability": [
+        {
+          "value": 3
+        }
+      ],
+      "stock": [
+        {
+          "value": 9
+        }
+      ],
+      "handling_time": [
+        {
+          "value": 0
+        }
+      ],
+      "barcode": [],
+      "ean": [
+        "5907451319154"
+      ],
+      "commission": null,
+      "validation_status": [
+        {
+          "value": 9,
+          "description": "Approved documentation",
+          "errors": null
+        }
+      ],
+      "translation_validation_status": [
+        {
+          "value": 9,
+          "description": "Approved documentation",
+          "errors": null
+        }
+      ],
+      "offer_validation_status": {
+        "value": 1,
+        "description": "Saleable",
+        "errors": null
+      },
+      "auto_translated": 0,
+      "ownership": true,
+      "best_offer_sale_price": 32.3,
+      "best_offer_recommended_price": 100,
+      "number_of_offers": 5,
+      "genius_eligibility": 1,
+      "recycleWarranties": 0,
+      "rrp_guidelines": null
+    },
+    {
+      "part_number_key": "DDQMDDYBM",
+      "brand_name": "OEM",
+      "buy_button_rank": 1,
+      "category_id": 1169,
+      "id": 14007753,
+      "brand": "OEM",
+      "vendor_category_id": null,
+      "name": "Jucarie Interactiva, Puiul de rata, ALMIDO, cu sunete si lumini, canta si danseaza, Multicolor, 17 cm",
+      "part_number": "SB-900",
+      "sale_price": "83.3000",
+      "currency": "RON",
+      "description": "<p>Jucarie interactiva copii RATOIUL DANSATOR Aceasta minunata jucarie va fi pe placul tuturor copiilor, datorita culorilor vesele si a muzicii placute, neavand sunete stridente/inalte. Pe spate prezinta un buton ON/OFF. Atunci cand este pornita jucaria danseaza, canta si lumineaza pe led. Functioneaza cu 3 baterii 1.5V AA. Bateriile nu sunt incluse in pachet.</p>",
+      "url": "",
+      "warranty": 0,
+      "general_stock": 5,
+      "weight": "0",
+      "status": 1,
+      "recommended_price": null,
+      "images": [
+        {
+          "url": "https://upload.cdn.baselinker.com/products/4034255/995c1d377e8041ad9f1a132e5e90f634.png",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/045/052/099/45052099.png",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/045/052/100/45052100.png",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/045/052/108/45052108.png",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/045/052/113/45052113.png",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/045/052/116/45052116.png",
+          "display_type": 0
+        },
+        {
+          "url": "https://marketplace-static.emag.ro/resources/000/045/052/118/45052118.png",
+          "display_type": 0
+        }
+      ],
+      "characteristics": [
+        {
+          "id": 2145,
+          "tag": null,
+          "value": "3x1.5V AA (nu sunt incluse in pachet)"
+        },
+        {
+          "id": 4162,
+          "tag": null,
+          "value": "3 ani"
+        },
+        {
+          "id": 5401,
+          "tag": null,
+          "value": "Multicolor"
+        },
+        {
+          "id": 5704,
+          "tag": null,
+          "value": "Jucarie interactiva"
+        },
+        {
+          "id": 6372,
+          "tag": null,
+          "value": "Plastic"
+        },
+        {
+          "id": 6556,
+          "tag": null,
+          "value": "1 Jucarie interactiva"
+        },
+        {
+          "id": 6779,
+          "tag": null,
+          "value": "17 centimetru"
+        },
+        {
+          "id": 6780,
+          "tag": null,
+          "value": "12 centimetru"
+        },
+        {
+          "id": 6876,
+          "tag": null,
+          "value": "10 centimetru"
+        },
+        {
+          "id": 6878,
+          "tag": null,
+          "value": "207 gram"
+        },
+        {
+          "id": 7235,
+          "tag": null,
+          "value": "Buton ON/OFF, Canta, Danseaza, Lumineaza"
+        },
+        {
+          "id": 7731,
+          "tag": null,
+          "value": "Abilitati senzoriale"
+        },
+        {
+          "id": 9084,
+          "tag": null,
+          "value": "Fete"
+        },
+        {
+          "id": 9084,
+          "tag": null,
+          "value": "Baieti"
+        }
+      ],
+      "attachments": [],
+      "vat_id": 1,
+      "family": null,
+      "start_date": [],
+      "estimated_stock": 5,
+      "reversible_vat_charging": false,
+      "min_sale_price": "50.0000",
+      "max_sale_price": "110.0000",
+      "offer_details": {
+        "id": 73008673,
+        "warranty_type": 1,
+        "supply_lead_time": 14,
+        "emag_club": 1
+      },
+      "content_details": {
+        "source_language": "ro_RO"
+      },
+      "offer_properties": [],
+      "availability": [
+        {
+          "value": 3
+        }
+      ],
+      "stock": [
+        {
+          "value": 5
+        }
+      ],
+      "handling_time": [
+        {
+          "value": 0
+        }
+      ],
+      "barcode": [],
+      "ean": [
+        "0749672945577"
+      ],
+      "commission": null,
+      "validation_status": [
+        {
+          "value": 9,
+          "description": "Approved documentation",
+          "errors": null
+        }
+      ],
+      "translation_validation_status": [
+        {
+          "value": 9,
+          "description": "Approved documentation",
+          "errors": null
+        }
+      ],
+      "offer_validation_status": {
+        "value": 1,
+        "description": "Saleable",
+        "errors": null
+      },
+      "auto_translated": 0,
+      "ownership": true,
+      "best_offer_sale_price": 83.3,
+      "best_offer_recommended_price": 83.3,
+      "number_of_offers": 1,
+      "genius_eligibility": 1,
+      "recycleWarranties": 0,
+      "rrp_guidelines": null
+    }
+  ]
+}
