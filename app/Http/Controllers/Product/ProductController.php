@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Http\Controllers\Controller;
 use App\Models\ProductCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
@@ -67,9 +68,12 @@ class ProductController extends Controller
         }
 
         $rows = $product->sortable()->paginate(10);
+        $info['total_zero']     =  DB::table('products')->select(DB::raw('count(id) as total_zero'))->where('stock','0')->value('total_zero');
+        $info['total_limit']    =  DB::table('products')->select(DB::raw('count(id) as total_limit'))->where('stock','<','3')->where('stock','>','0')->value('total_limit');
+        $info['total_value']    =  DB::table('products')->select(DB::raw('SUM(value * stock) as total_value'))->value('total_value');
 
         Session::put('product.index_url', request()->fullUrl());
-        return view('product.product.index',compact('filter_page','filter','category_list','where','rows'));
+        return view('product.product.index',compact('filter_page','filter','category_list','where','rows','info'));
     }
 
     /**

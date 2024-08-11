@@ -12,6 +12,75 @@
     @include('layouts.alert')
 
     <div class="row">
+        <div class="col-xl-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mini-stats-wid">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="flex-grow-1">
+                                    <p class="text-muted fw-medium">Produse cu stoc ZERO</p>
+                                    <h4 class="mb-0">{{ $info['total_zero'] ?? 0  }}</h4>
+                                </div>
+
+                                <div class="flex-shrink-0 align-self-center">
+                                    <div class="mini-stat-icon avatar-sm rounded-circle bg-primary">
+                                        <span class="avatar-title">
+                                            <i class="bx bx-copy-alt font-size-24"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mini-stats-wid">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="flex-grow-1">
+                                    <p class="text-muted fw-medium">Produse cu stoc limitat</p>
+                                    <h4 class="mb-0">{{ $info['total_limit'] ?? 0   }}</h4>
+                                </div>
+
+                                <div class="flex-shrink-0 align-self-center">
+                                    <div class="mini-stat-icon avatar-sm rounded-circle bg-primary">
+                                        <span class="avatar-title">
+                                            <i class="bx bx-copy-alt font-size-24"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mini-stats-wid">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="flex-grow-1">
+                                    <p class="text-muted fw-medium">Valoare stoc (vanzare)</p>
+                                    <h4 class="mb-0">{{ $info['total_value'] ?? 0  }}</h4>
+                                </div>
+
+                                <div class="flex-shrink-0 align-self-center">
+                                    <div class="mini-stat-icon avatar-sm rounded-circle bg-primary">
+                                        <span class="avatar-title">
+                                            <i class="bx bx-copy-alt font-size-24"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-lg-3">
             @can('product:product-create')
                 <a  class="btn btn-success btn-rounded btn-label waves-effect waves-light mb-2 me-2" href="{{ route('product.create') }}"  title="Adauga"><i class="bx bx-plus label-icon"></i> Adauga</a>
