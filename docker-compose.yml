@@ -1,0 +1,75 @@
+services:
+    app:
+        build:
+            dockerfile: Dockerfile
+        image: kessel:dev
+        pull_policy: always
+        extra_hosts:
+            - 'host.docker.internal:host-gateway'
+        ports:
+            - '${APP_PORT:-8081}:80'
+        env_file: ./.env.docker
+        volumes:
+            - 'kessel-app:/app'
+        networks:
+            - kessel
+        depends_on:
+            - mariadb
+            - redis
+    mariadb:
+        image: 'mariadb:10'
+        # ports:
+        #     - '${FORWARD_DB_PORT:-3307}:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ROOT_HOST: '%'
+            MYSQL_DATABASE: '${DB_DATABASE}'
+            MYSQL_USER: '${DB_USERNAME}'
+            MYSQL_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+        volumes:
+            - 'kessel-mariadb:/var/lib/mysql'
+        networks:
+            - kessel
+        healthcheck:
+            test:
+                - CMD
+                - mysqladmin
+                - ping
+                - '-p${DB_PASSWORD}'
+            retries: 3
+            timeout: 5s
+    redis:
+        image: 'redis:alpine'
+        # ports:
+        #     - '${FORWARD_REDIS_PORT:-6379}:6379'
+        volumes:
+            - 'kessel-redis:/data'
+        networks:
+            - kessel
+        healthcheck:
+            test:
+                - CMD
+                - redis-cli
+                - ping
+            retries: 3
+            timeout: 5s
+    cron:
+        image: rolsoftware/laravel-cron
+        env_file: ./.env.docker
+        volumes:
+            - 'kessel-app:/app'
+        networks:
+            - kessel
+        depends_on:
+            - app
+networks:
+    kessel:
+        driver: bridge
+volumes:
+    kessel-app:
+        driver: local
+    kessel-mariadb:
+        driver: local
+    kessel-redis:
+        driver: local
