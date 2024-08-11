@@ -17,7 +17,7 @@ class Product extends Model
 
     public function category()
     {
-        return $this->belongsTo(ProductCategory::class);
+        // return $this->belongsTo(ProductCategory::class);
     }
 
     public function images()
@@ -29,9 +29,11 @@ class Product extends Model
     {
         # return first image in base64
         $image = $this->images()->where('default','Yes')->first();
-        if($image) {
-            return 'data:image/jpeg;base64,'.base64_encode(file_get_contents($image->path));
-        }
+        $path = "build/images/product/no-image.svg";
 
+        if($image) {
+            return  'data:image/jpeg;base64,'.base64_encode(file_get_contents($image->path));
+        }
+        return $path;
     }
 }

@@ -59,7 +59,7 @@
                                         <td><span class="product-line-price">{{ round(($row->price * $row->stock),2) }} RON</span></td>
                                         <td>
                                             <ul class="list-inline font-size-20 contact-links mb-0">
-                                                <li class="list-inline-item"><a href="{{ route('product-category.edit',$row->id) }}" title="Editeaza"><i class="text-success bx bx-edit-alt"></i></a></li>
+                                                <li class="list-inline-item"><a href="{{ route('product.edit',$row->id) }}" title="Actualizare stock"><i class="text-success bx bx-edit-alt"></i></a></li>
                                             </ul>
                                         </td>
                                     </tr>

@@ -101,7 +101,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        $category_list = ProductCategory::all();
+        return view('product.product.edit',compact('product','category_list'));
     }
 
     /**
@@ -109,7 +110,13 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+
+        $input = $request->validated();
+        $input['value'] = $input['price'] + ($input['price'] * $input['vat'] / 100);
+        $input['status'] = 'Active';
+        $product->update($input);
+
+        return redirect(route('product.index'))->with('alert',['type'=>'alert-success','message'=>'Produsul a fost actualizat cu succes!']);
     }
 
     /**
@@ -118,5 +125,10 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+    }
+
+    public function stock (Product $product)
+    {
+        return view('product.product.stock',compact('product'));
     }
 }
