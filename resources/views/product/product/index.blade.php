@@ -2,6 +2,10 @@
 
 @section('title')  {{ @$title }}  @endsection
 
+@section('css')
+    <link href="build/libs/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+@endsection
+
 @section('content')
 
     @component('components.breadcrumb')
@@ -118,7 +122,11 @@
                             <tbody>
                                 @foreach ($rows as $row)
                                     <tr class="product">
-                                        <td><img src="{{ $row->first_image }}" alt="product-img" title="{{ $row->images->first()->name ?? "xxx" }}" class="avatar-md" /></td>
+                                        <td>
+                                            <a class="image-popup-vertical-fit" href="{{ $row->first_image }}" title="{{ $row->name }}">
+                                                <img class="avatar-md" alt="" src="{{ $row->first_image }}"  class="avatar-md" style="height:auto">
+                                            </a>
+                                            {{-- <img src="{{ $row->first_image }}" alt="{{ $row->name }}"" title="{{ $row->images->first()->name ?? "xxx" }}" class="avatar-md" style="height:auto"/></td> --}}
                                         <td>
                                             <h5 class="font-size-14 text-wrap"><a href="ecommerce-product-detail" class="text-dark">{{ $row->name }}</a></h5>
                                             <p class="mb-0">Brand : <span class="fw-medium">{{ $row->brand }}</span></p>
@@ -144,4 +152,7 @@
 
 @endsection
 
-
+@section('script')
+    <script src="build/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="build/js/pages/lightbox.init.js"></script>
+@endsection
