@@ -31,3 +31,9 @@ Route::get('/app/user/password/{user}', [App\Http\Controllers\Base\UserControlle
 Route::put('/app/user/update-password/{user}', [App\Http\Controllers\Base\UserController::class, 'updatePassword'])->name('user.updatePassword');
 Route::get('/app/user/export', [App\Http\Controllers\Base\UserController::class, 'export'])->name('user.export');
 Route::resource('/app/user', App\Http\Controllers\Base\UserController::class);
+
+
+# Product
+Route::resource('/product', App\Http\Controllers\Product\ProductController::class);
+Route::resource('/product-category', App\Http\Controllers\Product\CategoryController::class);
+
