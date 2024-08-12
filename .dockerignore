@@ -1,1 +1,3 @@
-storage/app/*
+/node_modules
+/vendor
+/storage/app/public/*

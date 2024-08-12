@@ -32,7 +32,9 @@ class Product extends Model
         $path = "build/images/product/no-image.svg";
 
         if($image) {
-            return  'data:image/jpeg;base64,'.base64_encode(file_get_contents($image->path));
+            if(file_exists($image->path)){
+                return  'data:image/jpeg;base64,'.base64_encode(file_get_contents($image->path));
+            }
         }
         return $path;
     }
