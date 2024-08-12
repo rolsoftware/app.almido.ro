@@ -110,8 +110,7 @@ class ImportProductEmag extends Command
                     $response = Http::get($image['url']);
 
                     if ($response->successful()) {
-
-                        $directory = storage_path("products/".$product->id."/");
+                        $directory = storage_path("app/public/products/".$product->id."/");
                         if (!File::exists($directory))  File::makeDirectory($directory, 0755, true);
 
                         $image_path = $directory . '/' . $product->code.'_'.$key.'.jpg';
